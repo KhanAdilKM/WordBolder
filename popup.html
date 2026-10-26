@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusRead</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand-mark">FR</div>
+    <div><h1>FocusRead</h1><p>Make this page easier to read</p></div>
+  </header>
+
+  <section class="quick-actions">
+    <button id="enableAll" class="primary">Enable reading aids</button>
+    <button id="reset" class="quiet">Reset page</button>
+  </section>
+
+  <section class="group">
+    <h2>Word styling</h2>
+    <label class="toggle"><span><strong>Bold word beginnings</strong><small>Emphasise the first letters</small></span><input type="checkbox" id="boldStarts"><i></i></label>
+    <div class="control-row">
+      <label for="letters">Letters to bold</label>
+      <select id="letters"><option value="1">1 letter</option><option value="2">2 letters</option><option value="3" selected>3 letters</option><option value="4">4 letters</option></select>
+    </div>
+    <label class="toggle"><span><strong>Colour word beginnings</strong><small>Use a subtle accent colour</small></span><input type="checkbox" id="colourStarts"><i></i></label>
+    <div class="control-row">
+      <label for="accent">Accent colour</label>
+      <select id="accent"><option value="blue">Calm blue</option><option value="purple">Soft purple</option><option value="teal">Teal</option><option value="coral">Warm coral</option></select>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>Comfortable text</h2>
+    <div class="control-row"><label for="fontSize">Text size</label><select id="fontSize"><option value="default">Website default</option><option value="18">18 px</option><option value="20">20 px</option><option value="22">22 px</option></select></div>
+    <div class="control-row"><label for="lineSpacing">Line spacing</label><select id="lineSpacing"><option value="default">Website default</option><option value="1.5">Comfortable</option><option value="1.8">Extra space</option><option value="2">Very spacious</option></select></div>
+    <label class="toggle"><span><strong>Extra paragraph spacing</strong><small>Separate blocks of text</small></span><input type="checkbox" id="paragraphSpacing"><i></i></label>
+    <label class="toggle"><span><strong>Narrow reading width</strong><small>Keep long lines shorter</small></span><input type="checkbox" id="narrowWidth"><i></i></label>
+  </section>
+
+  <section class="group">
+    <h2>Stay on track</h2>
+    <label class="toggle"><span><strong>Reading line guide</strong><small>Follow your cursor across the page</small></span><input type="checkbox" id="ruler"><i></i></label>
+    <label class="toggle"><span><strong>Paragraph focus</strong><small>Highlight the paragraph under your cursor</small></span><input type="checkbox" id="paragraphFocus"><i></i></label>
+    <div class="control-row"><label for="readingTime">Reading estimate</label><button id="estimate" class="small">Estimate time</button></div>
+    <p id="estimateResult" class="estimate" aria-live="polite"></p>
+    <div class="control-row"><label for="readAloud">Read page aloud</label><button id="readAloud" class="small">Read aloud</button></div>
+    <p class="hint">Read aloud uses your browser’s speech service. Some pages may block extensions or contain text that cannot be accessed.</p>
+  </section>
+  <footer><span id="status">Changes apply to this tab.</span><span>FocusRead 1.0</span></footer>
+  <script src="popup.js"></script>
+</body>
+</html>

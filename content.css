@@ -1,0 +1,13 @@
+/* FocusRead styles are applied only when the corresponding setting is enabled. */
+.focusread-prefix{font-weight:800!important}
+html.focusread-colour-blue .focusread-prefix{color:#2458a6!important}
+html.focusread-colour-purple .focusread-prefix{color:#7650a8!important}
+html.focusread-colour-teal .focusread-prefix{color:#087e79!important}
+html.focusread-colour-coral .focusread-prefix{color:#b94e38!important}
+html.focusread-custom-font body,html.focusread-custom-font body *{font-size:var(--focusread-font-size)!important}
+html.focusread-custom-line body,html.focusread-custom-line body *{line-height:var(--focusread-line-spacing)!important}
+html.focusread-paragraph-spacing p,html.focusread-paragraph-spacing li{margin-bottom:1.15em!important}
+html.focusread-narrow body main,html.focusread-narrow body article,html.focusread-narrow body [role="main"],html.focusread-narrow body .article,html.focusread-narrow body .content{max-width: min(78ch, 94vw)!important;margin-left:auto!important;margin-right:auto!important}
+.focusread-paragraph-active{outline:2px solid #7ba6e8!important;outline-offset:3px!important;background-color:rgba(220,235,255,.32)!important;border-radius:3px!important}
+#focusread-ruler{position:fixed;left:0;right:0;height:1.9em;top:0;pointer-events:none;z-index:2147483647;background:rgba(255,220,120,.20);border-top:1px solid rgba(160,120,20,.35);border-bottom:1px solid rgba(160,120,20,.35);display:none}
+html.focusread-ruler-on #focusread-ruler{display:block}
